@@ -21,7 +21,7 @@ class ShareableServiceProvider extends ServiceProvider {
     {
         parent::boot($events);
         //$this->loadViewsFrom(__DIR__.'/views', 'shareable');
-        $this->publishes([__DIR__.'/views' => resource_path('views/vendor/shareable'),]);
+        $this->publishes(['../'.__DIR__.'/views' => resource_path('views/vendor/shareable'),]);
         //$this->package('ryannielson/shareable');
     }
 
