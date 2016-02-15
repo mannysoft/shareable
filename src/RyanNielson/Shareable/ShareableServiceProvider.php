@@ -20,7 +20,8 @@ class ShareableServiceProvider extends ServiceProvider {
     public function boot(DispatcherContract $events)
     {
         parent::boot($events);
-        $this->loadViewsFrom(__DIR__.'/views', 'shareable');
+        //$this->loadViewsFrom(__DIR__.'/views', 'shareable');
+        $this->publishes([__DIR__.'/views' => resource_path('views/vendor/shareable'),]);
         //$this->package('ryannielson/shareable');
     }
 
