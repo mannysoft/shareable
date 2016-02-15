@@ -1,6 +1,7 @@
 <?php namespace RyanNielson\Shareable;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
+use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
 class ShareableServiceProvider extends ServiceProvider {
 
@@ -16,9 +17,10 @@ class ShareableServiceProvider extends ServiceProvider {
      *
      * @return void
      */
-    public function boot()
+    public function boot(DispatcherContract $events)
     {
-        $this->package('ryannielson/shareable');
+        parent::boot($events);
+        //$this->package('ryannielson/shareable');
     }
 
     /**
