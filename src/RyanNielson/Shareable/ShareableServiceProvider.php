@@ -30,9 +30,14 @@ class ShareableServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app->bind('shareable', function($app) {
-            return new Shareable($app['view']);
-        });
+        // $this->app->bind('shareable', function($app) {
+        //     return new Shareable($app['view']);
+        // });
+        
+        $this->app['shareable'] = $this->app->share(function($app)
+		{
+			return new Shareable($app['view']);
+		});
     }
 
     /**
@@ -42,6 +47,6 @@ class ShareableServiceProvider extends ServiceProvider {
      */
     public function provides()
     {
-        return array();
+        return ['shareable'];
     }
 }
