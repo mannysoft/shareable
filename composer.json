@@ -1,5 +1,5 @@
 {
-  "name": "ryannielson/shareable",
+  "name": "mannysoft/shareable",
   "description": "A Laravel 4 package to make it easy to add social sharing buttons to your application.",
   "keywords": ["laravel", "social", "share", "facebook", "google plus", "twitter"],
   "homepage": "https://github.com/RyanNielson/shareable",
@@ -13,12 +13,8 @@
   ],
   "require": {
     "php": ">=5.3.0",
-    "illuminate/support": "~4.1",
-    "illuminate/view": "~4.1"
-  },
-  "require-dev": {
-    "mockery/mockery": "0.9.*",
-    "phpunit/phpunit": "4.0.*"
+    "illuminate/support": "~5.2",
+    "illuminate/view": "~5.2"
   },
   "autoload": {
     "psr-0": {
